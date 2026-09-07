@@ -24,7 +24,7 @@ The game has been out of official support for two decades. A small community sti
 | 8 | [Bigbuf network buffers](docs/patches/08-network-bigbuf.md) | Server | Enlarges send/receive buffers to cut packet loss on full servers | Documented |
 | 9 | [NWU hole-skip](docs/patches/09-nwu-hole-skip.md) | Both | NovaWorld connection fix (community "Spaghetti" fix) | Documented |
 | 10 | [128 m grass (TAC visual)](docs/patches/10-grass-128m.md) | Client | Extends grass draw distance and density | Verified, live |
-| 11 | [125 FPS lock](docs/patches/11-fps-lock-125.md) | Server | Locks the main loop to 8 ms frames (125 FPS) while sleeping between them, instead of the 62.5 FPS ceiling or a CPU-burning unlimited loop | Verified, live test in progress |
+| 11 | [125 FPS lock](docs/patches/11-fps-lock-125.md) | Server | Locks the main loop to a chosen frame rate (set `lock_framerate = 7` for ~125 FPS) while sleeping between frames, instead of the 62.5 FPS ceiling or a CPU-burning unlimited loop | Verified, live |
 
 Deeper reference material lives in [docs/systems/](docs/systems/):
 - [SYSDUMP crash-dump format](docs/systems/sysdump-format.md)
