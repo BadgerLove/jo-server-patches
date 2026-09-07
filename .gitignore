@@ -1,0 +1,39 @@
+# Never commit game binaries or assets. This repo is docs + patchers only.
+*.exe
+*.dll
+*.EXE
+*.DLL
+*.zip
+*.rar
+*.7z
+*.map
+*.pff
+*.bms
+
+# Game data / extracted assets (copyrighted — must never be published)
+*.def
+*.DEF
+*.raw
+*.RAW
+extracted/
+game/
+bin/
+
+# Reverse-engineering working files (may embed copyrighted code)
+*.kong.c
+*.idb
+*.i64
+*.bndb
+decompile/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
