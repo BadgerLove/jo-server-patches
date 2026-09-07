@@ -1,6 +1,8 @@
 # Unlimited FPS / Sleep removal (server / client)
 
-**Status:** documented. No automated patcher is shipped yet (see "Verification").
+**Status:** documented, and **superseded**. No automated patcher is shipped (see "Verification").
+
+> **Prefer the [125 FPS lock](11-fps-lock-125.md) instead.** This patch removes the throttle entirely, so the server busy-loops at ~285 FPS and burns a whole CPU core. The 125 FPS lock keeps the throttle and just changes its target, giving a steady 125 FPS while the process sleeps between frames. It also corrects the premise below: `Sleep(1)` is ~1 ms on this engine, not 15 ms, because the engine sets a 1 ms timer resolution at startup. The 59 FPS cap was the hardcoded 16 ms target, not Sleep granularity.
 
 ## What it does
 
