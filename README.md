@@ -25,6 +25,7 @@ The game has been out of official support for two decades. A small community sti
 | 9 | [NWU hole-skip](docs/patches/09-nwu-hole-skip.md) | Both | NovaWorld connection fix (community "Spaghetti" fix) | Documented |
 | 10 | [128 m grass (TAC visual)](docs/patches/10-grass-128m.md) | Client | Extends grass draw distance and density | Verified, live |
 | 11 | [125 FPS lock](docs/patches/11-fps-lock-125.md) | Server | Locks the main loop to a chosen frame rate (set `lock_framerate = 7` for ~125 FPS) while sleeping between frames, instead of the 62.5 FPS ceiling or a CPU-burning unlimited loop | Verified, live |
+| 12 | [Configurable spawn protection](docs/patches/12-spawn-protection-config.md) | Server | Spawn-protection duration becomes a `game.cfg` setting (`e_spawn_protection = 5`), no rebuild per change | Verified, live |
 
 Deeper reference material lives in [docs/systems/](docs/systems/):
 - [SYSDUMP crash-dump format](docs/systems/sysdump-format.md)

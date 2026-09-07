@@ -15,7 +15,8 @@ Run scripts from inside this `scripts/` directory (they import the shared helper
 |--------|------|-------|
 | `patch_admin_crash.py` | server | admin client-table crash fix |
 | `patch_vehicle_weapon.py` | client | vehicle-seat weapon restore fix |
-| `patch_spawn_protection.py` | server | spawn-protection duration (seconds arg) |
+| `patch_spawn_protection.py` | server | spawn-protection duration (seconds arg, fixed at patch time) |
+| `patch_spawn_protection_config.py` | server | spawn-protection duration from game.cfg (`e_spawn_protection = 5`); use instead of the one above |
 | `patch_memory_2gb.py` | both | 512 MB to 2 GB heap cap |
 | `patch_large_address_aware.py` | both | set the LAA PE flag |
 | `patch_packet_rate.py` | server | network send rate (32/62/125 arg) |
