@@ -16,10 +16,6 @@ Sizes:
                                 server to this value at runtime since 2026
   1 GB  (--size 1024) 0x40000000 optional; needs Large Address Aware and a
                                 64-bit host, and is the practical ceiling
-  1920 MB (--size 1920) 0x78000000 EXPERIMENTAL. Largest size a 32-bit LAA
-                                process can reserve; the arena lands above the
-                                2 GB address line, where signed pointer maths
-                                may break. Untested in play.
   2 GB  is NOT offered. Measured: a 32-bit LAA process fails to reserve 2047 MB
         or more, and the allocator treats the size as signed. 0x80000000 is a
         guaranteed start-up crash.
@@ -31,7 +27,7 @@ byte pattern and rewrites it to 512 MB itself.
 Full write-up: docs/patches/04-memory-2gb.md (replaces the original patch 04;
 revert_memory_2gb.py undoes that one first on a v1/v2 JOexeFIX exe)
 
-Usage:  python patch_fastmem_arena.py <in.exe> <out.exe> [--size 512|1024|1920]
+Usage:  python patch_fastmem_arena.py <in.exe> <out.exe> [--size 512|1024]
 """
 import sys
 
@@ -43,7 +39,6 @@ OLD = (0x0C000000).to_bytes(4, "little")  # 192 MB, retail 1.7.5.7
 SIZES = {
     512:  (0x20000000).to_bytes(4, "little"),
     1024: (0x40000000).to_bytes(4, "little"),
-    1920: (0x78000000).to_bytes(4, "little"),   # experimental, see docstring
 }
 
 

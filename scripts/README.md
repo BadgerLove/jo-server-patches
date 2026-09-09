@@ -17,7 +17,7 @@ Run scripts from inside this `scripts/` directory (they import the shared helper
 | `patch_vehicle_weapon.py` | client | vehicle-seat weapon restore fix |
 | `patch_spawn_protection.py` | server | spawn-protection duration (seconds arg, fixed at patch time) |
 | `patch_spawn_protection_config.py` | server | spawn-protection duration from game.cfg (`e_spawn_protection = 5`); use instead of the one above |
-| `patch_fastmem_arena.py` | both | mission memory arena 192 MB to 512 MB (default), 1 GB (`--size 1024`, needs LAA) or experimental 1920 MB (`--size 1920`) |
+| `patch_fastmem_arena.py` | both | mission memory arena 192 MB to 512 MB (default) or 1 GB (`--size 1024`, needs LAA) |
 | `revert_memory_2gb.py` | both | undo the original patch 04 on a JOexeFIX v1/v2 exe (four non-memory sites back to retail) |
 | `patch_large_address_aware.py` | both | set the LAA PE flag |
 | `patch_packet_rate.py` | server | network send rate (32/62/125 arg) |
