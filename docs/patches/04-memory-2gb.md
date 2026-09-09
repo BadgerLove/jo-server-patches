@@ -21,10 +21,11 @@ The patch changes that one immediate:
 |---|---|---|
 | `512` (default) | `0x20000000` | The FMJ server has run at exactly this value since 2026. A busy 125 Hz map uses about 210 MB of it. |
 | `1024` | `0x40000000` | Needs [Large Address Aware](05-large-address-aware.md) and a 64-bit host. Started and ran the FMJ server on 9 September 2026. |
+| `1920` | `0x78000000` | **Experimental.** The largest block a 32-bit LAA process can reserve; the arena lands above the 2 GB address line. Untested in play. Shipped in JOexeFIX v3 as `1920MB-EXPERIMENTAL/` so people can find out. |
 
-One byte actually changes on disk (`0xA7CE6`: `0C` to `20` or `40`).
+One byte actually changes on disk (`0xA7CE6`: `0C` to `20`, `40` or `78`).
 
-**2 GB is not offered.** Measured on 64-bit Windows: a 32-bit LAA process reserves and commits 1792 MB fine, 1920 MB only by landing above the 2 GB address line, and 2047 MB / 2048 MB fail outright. The game's allocator also treats the size as signed. `0x80000000` is a guaranteed start-up crash. 1 GB is the ceiling.
+**2 GB is not offered.** Measured on 64-bit Windows: a 32-bit LAA process reserves and commits 1792 MB fine, 1920 MB only by landing above the 2 GB address line, and 2047 MB / 2048 MB fail outright. The game's allocator also treats the size as signed. `0x80000000` is a guaranteed start-up crash. 1 GB is the safe ceiling; 1920 MB is offered only as an experiment.
 
 ## How to apply
 
