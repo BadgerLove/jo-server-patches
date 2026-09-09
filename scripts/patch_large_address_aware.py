@@ -1,7 +1,7 @@
 """Set the Large Address Aware (LAA) flag in the PE header.
 
 Without this flag a 32-bit process is limited to 2 GB of virtual address space,
-so the 2 GB heap patch cannot actually be used. Setting
+so the 1 GB mission arena option cannot be used. Setting
 IMAGE_FILE_LARGE_ADDRESS_AWARE (0x0020) in the COFF Characteristics field lets
 the process use the larger user-mode address space on a 64-bit OS.
 

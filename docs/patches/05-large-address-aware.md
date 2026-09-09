@@ -6,7 +6,7 @@
 
 Sets the `IMAGE_FILE_LARGE_ADDRESS_AWARE` flag (`0x0020`) in the PE header. Without it, a 32-bit process is limited to 2 GB of user-mode virtual address space. With it, on a 64-bit Windows host the process can use up to 4 GB.
 
-This is a prerequisite for the [2 GB memory cap](04-memory-2gb.md) patch to have any effect.
+This is required for the 1 GB option of the [mission memory arena](04-memory-2gb.md) patch and recommended for 512 MB.
 
 ## The patch
 

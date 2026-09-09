@@ -17,7 +17,8 @@ Run scripts from inside this `scripts/` directory (they import the shared helper
 | `patch_vehicle_weapon.py` | client | vehicle-seat weapon restore fix |
 | `patch_spawn_protection.py` | server | spawn-protection duration (seconds arg, fixed at patch time) |
 | `patch_spawn_protection_config.py` | server | spawn-protection duration from game.cfg (`e_spawn_protection = 5`); use instead of the one above |
-| `patch_memory_2gb.py` | both | 512 MB to 2 GB heap cap |
+| `patch_fastmem_arena.py` | both | mission memory arena 192 MB to 512 MB (default) or 1 GB (`--size 1024`, needs LAA) |
+| `revert_memory_2gb.py` | both | undo the original patch 04 on a JOexeFIX v1/v2 exe (four non-memory sites back to retail) |
 | `patch_large_address_aware.py` | both | set the LAA PE flag |
 | `patch_packet_rate.py` | server | network send rate (32/62/125 arg) |
 | `patch_grass128.py` | client | 128 m grass (visual) |
@@ -30,8 +31,8 @@ Unlimited FPS ([docs](../docs/patches/06-unlimited-fps.md)), Bigbuf ([docs](../d
 ## Example
 
 ```
-# make a 2 GB, large-address-aware server exe
-python patch_memory_2gb.py            jointops.exe        jointops_a.exe
+# make a 512 MB-arena, large-address-aware server exe
+python patch_fastmem_arena.py         jointops.exe        jointops_a.exe
 python patch_large_address_aware.py   jointops_a.exe      jointops_b.exe
 python patch_admin_crash.py           jointops_b.exe      jointops_server.exe
 ```
