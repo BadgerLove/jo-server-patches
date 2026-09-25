@@ -26,6 +26,8 @@ The game has been out of official support for two decades. A small community sti
 | 10 | [128 m grass (TAC visual)](docs/patches/10-grass-128m.md) | Client | Extends grass draw distance and density | Verified, live |
 | 11 | [125 FPS lock](docs/patches/11-fps-lock-125.md) | Server | Locks the main loop to a chosen frame rate (set `lock_framerate = 7` for ~125 FPS) while sleeping between frames, instead of the 62.5 FPS ceiling or a CPU-burning unlimited loop | Verified, live |
 | 12 | [Configurable spawn protection](docs/patches/12-spawn-protection-config.md) | Server | Spawn-protection duration becomes a `game.cfg` setting (`e_spawn_protection = 5`), no rebuild per change | Verified, live |
+| 13 | [Spectator HUD for casters](docs/patches/13-spectator-hud-client.md) | Client | Spectators get chat, blue/red name tags over players' heads, health bars, and working talk keys | Verified, live |
+| 14 | [Spectator chat relay + Kill List crash fix](docs/patches/14-spectator-chat-server.md) | Server | Relays a spectator's chat to players; one-byte fix for the retail crash that takes out stock clients when a spectator leaves | Verified, live |
 
 Deeper reference material lives in [docs/systems/](docs/systems/):
 - [SYSDUMP crash-dump format](docs/systems/sysdump-format.md)
