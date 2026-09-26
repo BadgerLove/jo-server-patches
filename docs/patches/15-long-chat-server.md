@@ -51,6 +51,6 @@ Works on a stock server exe on its own, or on top of the other server patches he
 ## Verification
 
 - Applied to the patch-14 server build (`a3e314f6…`): without `--colour` → `1ee93e27…`, with `--colour` → `273bc0ea…`.
-- Applied on its own to a stock 1.7.5.7 exe with only the LAA flag (`b9971c82…`), `--colour` → `0eb63bfc…`; emulated with the same results.
+- Applied on its own to a 1.7.5.7 exe carrying none of the other patches here except LAA and the 125 Hz send rate (`b9971c82…`), `--colour` → `0eb63bfc…`; emulated with the same results. (An earlier version of this page called that exe "stock with only the LAA flag"; its send-rate byte is the 125 Hz one.)
 - Emulated (the whole send function, network and display stubbed): the stock exe reproduces the live 59 cut exactly; the patched one sends 62 and 118 in full, caps 144 at 119, sends short lines byte-identical to stock, keeps tags with `--colour`, and returns with the stack, registers and cookie intact.
 - Live 2026-09-26: a 116-character line kept whole by the server; then five test lines seen in game, including red → yellow → blue on one line and an orange part followed by `<co>`.
