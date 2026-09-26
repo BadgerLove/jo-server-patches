@@ -22,7 +22,7 @@ The last item is the important stability piece. Extending the radius alone makes
 
 ## Do not
 
-Do not reuse the `.text` tail at `0x794DF0` as a code cave on client builds. Anti-cheat hook DLLs and the [NWU fix](09-nwu-hole-skip.md) live there. This patch uses the `int3` padding at `0x7472D0` instead.
+Do not reuse the `.text` tail at `0x794DF0` as a code cave on client builds. Anti-cheat hook DLLs and the server [hole-skip](09-nwu-hole-skip.md) cave live there. This patch uses the `int3` padding at `0x7472D0` instead.
 
 ## How to apply
 

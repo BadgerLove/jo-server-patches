@@ -21,6 +21,7 @@ Run scripts from inside this `scripts/` directory (they import the shared helper
 | `revert_memory_2gb.py` | both | undo the original patch 04 on a JOexeFIX v1/v2 exe (four non-memory sites back to retail) |
 | `patch_large_address_aware.py` | both | set the LAA PE flag |
 | `patch_packet_rate.py` | server | network send rate (32/62/125 arg) |
+| `patch_hole_skip.py` | server | hole-skip, so players do not freeze after a lost packet (`64` or `125` version; 32 Hz does not need it) |
 | `patch_grass128.py` | client | 128 m grass (visual) |
 | `patch_fps_lock.py` | server | lock main loop to a chosen FPS; then set `lock_framerate = 7` in game.cfg for ~125 |
 | `patch_spectator_client.py` | client | spectator HUD: chat visible, name tags, health bars, talk keys work |
@@ -29,7 +30,7 @@ Run scripts from inside this `scripts/` directory (they import the shared helper
 
 `patch_util.py` is the shared engine: it resolves virtual addresses to file offsets from the PE headers, verifies every site, then applies all changes and prints the input/output SHA-256.
 
-Unlimited FPS ([docs](../docs/patches/06-unlimited-fps.md)), Bigbuf ([docs](../docs/patches/08-network-bigbuf.md)) and the NWU fix ([docs](../docs/patches/09-nwu-hole-skip.md)) are documented but do not ship an automated patcher yet; see their pages for why.
+Unlimited FPS ([docs](../docs/patches/06-unlimited-fps.md)) and Bigbuf ([docs](../docs/patches/08-network-bigbuf.md)) are documented but do not ship an automated patcher yet; see their pages for why.
 
 ## Example
 

@@ -32,7 +32,10 @@ class Patch:
 
 
 def _sections(data: bytes):
-    """Yield (virtual_addr, virtual_size, raw_offset) for each PE section."""
+    """Yield (virtual_addr, span, raw_offset) for each PE section.  The span is
+    the larger of the virtual and raw sizes: Windows loads a section's whole
+    raw data, so the padding just past its virtual size is mapped too (the
+    hole-skip cave lives there)."""
     pe = struct.unpack_from("<I", data, 0x3c)[0]
     if data[pe:pe + 4] != b"PE\0\0":
         raise ValueError("not a PE file")
@@ -42,8 +45,8 @@ def _sections(data: bytes):
     first = pe + 24 + opt
     for i in range(nsec):
         o = first + i * 40
-        _vs, va, _rs, ro = struct.unpack_from("<IIII", data, o + 8)
-        yield image_base + va, _vs, ro
+        vs, va, rs, ro = struct.unpack_from("<IIII", data, o + 8)
+        yield image_base + va, max(vs, rs), ro
 
 
 def va_to_offset(data: bytes, va: int) -> int:

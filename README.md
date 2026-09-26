@@ -22,7 +22,7 @@ The game has been out of official support for two decades. A small community sti
 | 6 | [Unlimited FPS (Sleep removal)](docs/patches/06-unlimited-fps.md) | Both | Removes the frame-timing Sleep bottleneck | Verified |
 | 7 | [Packet send rate](docs/patches/07-packet-send-rate.md) | Server | Controls the network send-hold-off (observed ~62 vs ~125 packets/sec) | Verified |
 | 8 | [Bigbuf network buffers](docs/patches/08-network-bigbuf.md) | Server | Enlarges send/receive buffers to cut packet loss on full servers | Documented |
-| 9 | [NWU hole-skip](docs/patches/09-nwu-hole-skip.md) | Both | NovaWorld connection fix (community "Spaghetti" fix) | Documented |
+| 9 | [Hole-skip](docs/patches/09-nwu-hole-skip.md) | Server | Players no longer freeze in place after a lost packet on 64 Hz and 125 Hz servers (community "Spaghetti" fix; a 64 Hz and a 125 Hz version) | Verified, live |
 | 10 | [128 m grass (TAC visual)](docs/patches/10-grass-128m.md) | Client | Extends grass draw distance and density | Verified, live |
 | 11 | [125 FPS lock](docs/patches/11-fps-lock-125.md) | Server | Locks the main loop to a chosen frame rate (set `lock_framerate = 7` for ~125 FPS) while sleeping between frames, instead of the 62.5 FPS ceiling or a CPU-burning unlimited loop | Verified, live |
 | 12 | [Configurable spawn protection](docs/patches/12-spawn-protection-config.md) | Server | Spawn-protection duration becomes a `game.cfg` setting (`e_spawn_protection = 5`), no rebuild per change | Verified, live |
@@ -54,7 +54,7 @@ The patches target retail **v1.7.5.7** (expansion `revx02`). Some server-side of
 ## Credits
 
 - Reverse engineering, patches, docs: **BadgerLove / FMJ Squad**.
-- NovaWorld connection ("NWU hole-skip") fix: community contributor "Spaghetti".
+- Hole-skip (lost-packet freeze fix): community contributor "Spaghetti".
 - Retail protocol correctness pass on the admin tooling: Taylor Finnell (Open Nova).
 
 ## Legal & disclaimer
