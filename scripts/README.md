@@ -25,6 +25,7 @@ Run scripts from inside this `scripts/` directory (they import the shared helper
 | `patch_fps_lock.py` | server | lock main loop to a chosen FPS; then set `lock_framerate = 7` in game.cfg for ~125 |
 | `patch_spectator_client.py` | client | spectator HUD: chat visible, name tags, health bars, talk keys work |
 | `patch_spectator_server.py` | server | spectator chat relay + Kill List crash fix (`--crash-fix-only` for just the one byte) |
+| `patch_long_chat.py` | server | admin/server chat up to 118 characters (`--colour` keeps `<cRRGGBB>` colours for players) |
 
 `patch_util.py` is the shared engine: it resolves virtual addresses to file offsets from the PE headers, verifies every site, then applies all changes and prints the input/output SHA-256.
 
