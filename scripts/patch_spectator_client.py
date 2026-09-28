@@ -42,9 +42,9 @@ TAGS_VA = 0x7BFA20
 BAR_VA = 0x7BFB20
 FMT_VA = 0x7BFCF0
 
-# Pre-assembled x86 (position-dependent: assembled for the VAs above).  Source in
-# the doc page; the loop reads the entity pool (0xA892E0/E4/E8) and the client
-# player table ([0xA87048]: +0 count, +0x2C 64-byte slots, +0xD active, +0x24 entity).
+# Pre-assembled x86 (position-dependent: assembled for the VAs above).  The
+# mechanism notes are kept private; the caves only run while the SERVER has
+# flagged this client as a spectator.
 TAGS = bytes.fromhex(
     "803dec60a800000f84ed000000833dbc204d02020f8de0000000f705341e4d02000400000f85d0000000"
     "60ff35c4184c02833dc4184c0200750ac705c4184c0202000000a1f460a800a310fa7b00c705f460a800"
