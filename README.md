@@ -32,8 +32,8 @@ The game has been out of official support for two decades. A small community sti
 | 16 | [Shark chase](docs/patches/16-shark-chase.md) | Host | Sharks swim at players in deep water and never chase onto land or beach themselves; soldiers and other creatures unchanged | Verified in game, live on the FMJ server |
 | 17 | [Berserk ignores its own kind](docs/patches/17-berserk-ignores-own-kind.md) | Host | Berserk creatures stop attacking others of the same kind (sharks no longer hunt each other); players and other AI unchanged | Verified in game (as a live patch), in WolfRAT 2.8.8+ |
 | 18 | [Spacebar parachute](docs/patches/18-spacebar-parachute.md) | Server | Players open a carried parachute by holding Jump in a fall, instead of it opening by itself; live patch, no exe script | Verified in game, in WolfRAT 2.9.3 |
-| 19 | [Keep claymores after a respawn](docs/patches/19-keep-claymores.md) | Server | A player's claymores stay armed when they redeploy (stock removes them); AT mines, satchels and leaving players unchanged | Emulator-checked; in-game test owed |
-| 20 | [Keep AT mines after a respawn](docs/patches/20-keep-at-mines.md) | Server | A player's AT mines stay armed when they redeploy; separate from 19 | Emulator-checked; in-game test owed |
+| 19 | [Keep claymores after a respawn](docs/patches/19-keep-claymores.md) | Server | A player's claymores stay armed when they redeploy (stock removes them); AT mines, satchels and leaving players unchanged | Emulator-checked, in WolfRAT 2.9.4; in-game test owed |
+| 20 | [Keep AT mines after a respawn](docs/patches/20-keep-at-mines.md) | Server | A player's AT mines stay armed when they redeploy; separate from 19 | Emulator-checked, in WolfRAT 2.9.4; in-game test owed |
 
 Deeper reference material lives in [docs/systems/](docs/systems/):
 - [SYSDUMP crash-dump format](docs/systems/sysdump-format.md)
