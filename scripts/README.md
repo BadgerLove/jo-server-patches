@@ -28,10 +28,11 @@ Run scripts from inside this `scripts/` directory (they import the shared helper
 | `patch_spectator_server.py` | server | spectator chat relay + Kill List crash fix (`--crash-fix-only` for just the one byte) |
 | `patch_long_chat.py` | server | admin/server chat up to 118 characters (`--colour` keeps `<cRRGGBB>` colours for players) |
 | `patch_shark_chase.py` | host | sharks chase swimmers in deep water, never onto land (`--depth METRES`, default 2) |
+| `patch_berserk_kin.py` | host | berserk creatures ignore others of their own kind (sharks stop hunting each other) |
 
 `patch_util.py` is the shared engine: it resolves virtual addresses to file offsets from the PE headers, verifies every site, then applies all changes and prints the input/output SHA-256.
 
-Unlimited FPS ([docs](../docs/patches/06-unlimited-fps.md)) and Bigbuf ([docs](../docs/patches/08-network-bigbuf.md)) are documented but do not ship an automated patcher yet; see their pages for why.
+Unlimited FPS ([docs](../docs/patches/06-unlimited-fps.md)) and Bigbuf ([docs](../docs/patches/08-network-bigbuf.md)) are documented but do not ship an automated patcher yet; see their pages for why. The spacebar parachute ([docs](../docs/patches/18-spacebar-parachute.md)) is a live patch that WolfRAT writes into the running server, so it has no exe script either.
 
 ## Example
 

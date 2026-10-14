@@ -30,6 +30,8 @@ The game has been out of official support for two decades. A small community sti
 | 14 | [Spectator chat relay + Kill List crash fix](docs/patches/14-spectator-chat-server.md) | Server | Relays a spectator's chat to players; one-byte fix for the retail crash that takes out stock clients when a spectator leaves | Verified, live |
 | 15 | [Long server chat + colours](docs/patches/15-long-chat-server.md) | Server | Server/admin chat lines up to 118 characters instead of 59, and `<cRRGGBB>` colours reach players; stock clients need nothing | Verified, live |
 | 16 | [Shark chase](docs/patches/16-shark-chase.md) | Host | Sharks swim at players in deep water and never chase onto land or beach themselves; soldiers and other creatures unchanged | Verified in game, live on the FMJ server |
+| 17 | [Berserk ignores its own kind](docs/patches/17-berserk-ignores-own-kind.md) | Host | Berserk creatures stop attacking others of the same kind (sharks no longer hunt each other); players and other AI unchanged | Verified in game (as a live patch), in WolfRAT 2.8.8+ |
+| 18 | [Spacebar parachute](docs/patches/18-spacebar-parachute.md) | Server | Players open a carried parachute by holding Jump in a fall, instead of it opening by itself; live patch, no exe script | Verified in game, in WolfRAT 2.9.3 |
 
 Deeper reference material lives in [docs/systems/](docs/systems/):
 - [SYSDUMP crash-dump format](docs/systems/sysdump-format.md)
