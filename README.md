@@ -34,6 +34,7 @@ The game has been out of official support for two decades. A small community sti
 | 18 | [Spacebar parachute](docs/patches/18-spacebar-parachute.md) | Server | Players open a carried parachute by holding Jump in a fall, instead of it opening by itself; live patch, no exe script | Verified in game, in WolfRAT 2.9.3 |
 | 19 | [Keep claymores after a respawn](docs/patches/19-keep-claymores.md) | Server | A player's claymores stay armed when they redeploy (stock removes them); AT mines, satchels and leaving players unchanged | Emulator-checked, in WolfRAT 2.9.4; in-game test owed |
 | 20 | [Keep AT mines after a respawn](docs/patches/20-keep-at-mines.md) | Server | A player's AT mines stay armed when they redeploy; separate from 19 | Emulator-checked, in WolfRAT 2.9.4; in-game test owed |
+| 21 | [Revive after a fall](docs/patches/21-revive-after-fall.md) | Host | A body that falls after death (off a roof, thrown by a blast) can be revived; stock records it as a suicide and the medic is refused | Checked in the code; in-game test owed |
 
 Deeper reference material lives in [docs/systems/](docs/systems/):
 - [SYSDUMP crash-dump format](docs/systems/sysdump-format.md)
