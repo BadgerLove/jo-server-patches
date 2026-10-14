@@ -32,6 +32,7 @@ Run scripts from inside this `scripts/` directory (they import the shared helper
 | `patch_keep_claymores.py` | server | claymores stay armed when their owner redeploys (shared code in `keep_devices.py`) |
 | `patch_keep_at_mines.py` | server | AT mines stay armed when their owner redeploys |
 | `patch_revive_after_fall.py` | host | a body that falls after death can still be revived (fall damage skips dead bodies) |
+| `patch_first_person_driver.py` | server | makes `mp_3rdperson_driver` in game.cfg work (0 = first person in vehicles); set the line after patching |
 
 `patch_util.py` is the shared engine: it resolves virtual addresses to file offsets from the PE headers, verifies every site, then applies all changes and prints the input/output SHA-256.
 
